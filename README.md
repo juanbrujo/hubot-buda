@@ -1,37 +1,39 @@
-# numberToCLPFormater
-transforms a number to currency used in Chile (Chilean Pesos).
+# Hubot-SURBTC
 
-[![npm version](https://badge.fury.io/js/numbertoclpformater.svg)](https://badge.fury.io/js/numbertoclpformater)
-![circleci status](https://circleci.com/gh/juanbrujo/numberToCLPFormater.svg?style=shield&circle-token=:circle-token)
+**Hubot script para mostrar el valor reciente del Bitcoin desde SURBTC.cl**
 
-**[NPM package](https://www.npmjs.com/package/numbertoclpformater)**
+[![npm version](https://badge.fury.io/js/hubot-surbtc.svg)](https://badge.fury.io/js/hubot-surbtc)
 
-### USE: 
+**[NPM package](https://www.npmjs.com/package/hubot-surbtc)**
 
-```
-var number = require('numbertoclpformater').numberToCLPFormater;
+### Instalación:
 
-number(876142) 
-// $876.142
-```
+````
+$ npm install hubot-surbtc --save
+````
 
-##### Change currency symbol:
+Agregar en `external-scripts.json`:
 
-```
-number(981426719, 'CLP$');
-// CLP$981.426.719
-```
+````
+[
+  ..
+  "hubot-surbtc"
+]
+````
 
-##### Display cents, remove currency symbol
+### Uso:
 
-```
-number(1001, false, true);
-// 1.001,00
-```
+````
+hubot> surbtc bitcoin
+````
 
-##### Negative number
+**Ejemplo:**
 
-```
-number(-89163729);
-// $-89.163.729
-```
+````
+hubot> hubot surbtc bitcoin
+
+hubot> 1 bitcoin está a CLP$ 832.123 en SURBTC
+````
+
+### Licencia:
+[MIT](https://opensource.org/licenses/MIT)
