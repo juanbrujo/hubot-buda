@@ -2,7 +2,9 @@
 
 **Hubot script para mostrar el valor reciente del Bitcoin desde SURBTC.cl**
 
-[![npm version](https://badge.fury.io/js/hubot-surbtc.svg)](https://badge.fury.io/js/hubot-surbtc)
+[![](https://img.shields.io/badge/huemul-approved-brightgreen.svg?style=flat-square)](http://www.devschile.cl/)
+[![npm version](https://badge.fury.io/js/hubot-surbtc.svg)](https://www.npmjs.com/package/hubot-surbtc)
+[![](https://circleci.com/gh/juanbrujo/hubot-surbtc.svg?style=shield)](https://circleci.com/gh/juanbrujo/hubot-surbtc)
 
 **[NPM package](https://www.npmjs.com/package/hubot-surbtc)**
 

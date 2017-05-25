@@ -1,10 +1,10 @@
 {
   "name": "hubot-surbtc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hubot script para mostrar el valor reciente del Bitcoin desde SURBTC.cl",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "keywords": [
     "bitcoin",
@@ -13,6 +13,7 @@
   "author": "@juanbrujo",
   "license": "MIT",
   "dependencies": {
+    "hippie": "^0.5.1",
     "numbertoclpformater": "^1.0.0"
   }
 }
