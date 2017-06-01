@@ -13,7 +13,9 @@
   "author": "@juanbrujo",
   "license": "MIT",
   "dependencies": {
-    "hippie": "^0.5.1",
     "numbertoclpformater": "^1.0.0"
+  },
+  "devDependencies": {
+    "hippie": "^0.5.1"
   }
 }
