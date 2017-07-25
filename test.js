@@ -13,5 +13,6 @@ hippie()
   .expectBody(/last_price/g)
   .end(function(err, res, body) {
     if (err) throw err;
+    console.log(body);
     process.exit(0);
   });
