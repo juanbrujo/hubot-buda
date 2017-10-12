@@ -1,13 +1,14 @@
 {
   "name": "hubot-surbtc",
   "version": "0.0.2",
-  "description": "Hubot script para mostrar el valor reciente del Bitcoin desde SURBTC.cl",
+  "description": "Hubot script para mostrar el valor reciente de las criptomonedas en SURBTC.cl",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
   "keywords": [
     "bitcoin",
+    "ethereum",
     "chile"
   ],
   "author": "@juanbrujo",
