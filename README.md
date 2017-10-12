@@ -29,6 +29,10 @@ Agregar en `external-scripts.json`:
 hubot> surbtc bitcoin
 ````
 
+````
+hubot> surbtc ethereum
+````
+
 **Ejemplo:**
 
 ````
