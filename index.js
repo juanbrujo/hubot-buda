@@ -36,27 +36,21 @@ module.exports = (robot) => {
       } else {
         res.setEncoding('utf-8')
         let data = JSON.parse(body)
-        if (data) {
+        if (data.ticker) {
           let formatNumb = number(data.ticker.last_price[0], 'CLP$ ')
           msg.send( `1 ${coin} está a ${formatNumb} en SURBTC` )
         } else {
-          msg.send('Error :ql: !')
+          robot.logger.error(data)
+          msg.send(`${data.message} error :ql: !`)
         }
       }
     })
   }
 
-  robot.respond(/surbtc ethereum/i, (msg) => {
-
+  robot.respond(/surbtc (.*)/i, (msg) => {
+    let coin = msg.match[1]
     msg.send('Consultando último valor con SURBTC... :clock5:')
-    surbtcRequest('ethereum',msg)
-
-  })
-
-  robot.respond(/surbtc bitcoin/i, (msg) => {
-
-    msg.send('Consultando último valor con SURBTC... :clock5:')
-    surbtcRequest('bitcoin',msg)
+    surbtcRequest(coin,msg)
 
   })
 
