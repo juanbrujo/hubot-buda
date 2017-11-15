@@ -33,6 +33,10 @@ hubot> surbtc bitcoin
 hubot> surbtc ethereum
 ````
 
+````
+hubot> surbtc bitcoin-cash
+````
+
 **Ejemplo:**
 
 ````
