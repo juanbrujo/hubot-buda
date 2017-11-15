@@ -10,6 +10,7 @@
 // Commands:
 //   hubot surbtc bitcoin
 //   hubot surbtc ethereum
+//   hubot surbtc bitcoin-cash
 //
 // Author:
 //   @juanbrujo
@@ -20,14 +21,14 @@ module.exports = (robot) => {
 
   let surbtcRequest = (coin, msg) => {
     let market
-    switch(coin){
-      case 'bitcoin':
-        market = 'btc-clp'
-        break
-      case 'ethereum':
-        market = 'eth-clp'
-        break
-    }
+
+    if(coin=='bitcoin' || coin=='btc')
+      market = 'btc-clp'
+    else if(coin=='ethereum' || coin=='eth')
+      market = 'eth-clp'
+    else if(coin=='bitcoin-cash' || coin=='bch' || coin=='bitcoincash')
+      market = 'bch-clp'
+
     let url = `https://www.surbtc.com/api/v2/markets/${market}/ticker.json`
 
     msg.http(url).get()(function(err, res, body) {
@@ -37,7 +38,7 @@ module.exports = (robot) => {
         res.setEncoding('utf-8')
         let data = JSON.parse(body)
         if (data.ticker) {
-          let formatNumb = number(data.ticker.last_price[0], 'CLP$ ')
+          let formatNumb = number(data.ticker.last_price[0], 'CLP $')
           msg.send( `1 ${coin} está a ${formatNumb} en SURBTC` )
         } else {
           robot.logger.error(data)
@@ -53,5 +54,4 @@ module.exports = (robot) => {
     surbtcRequest(coin,msg)
 
   })
-
 }
