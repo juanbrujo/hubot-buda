@@ -8,9 +8,9 @@
 //   None
 //
 // Commands:
-//   hubot surbtc bitcoin
-//   hubot surbtc ethereum
-//   hubot surbtc bitcoin-cash
+//   hubot surbtc bitcoin | btc
+//   hubot surbtc ethereum | eth
+//   hubot surbtc bitcoin-cash | bch
 //
 // Author:
 //   @juanbrujo
@@ -22,12 +22,16 @@ module.exports = (robot) => {
   let surbtcRequest = (coin, msg) => {
     let market
 
-    if(coin=='bitcoin' || coin=='btc')
+    if (coin=='bitcoin' || coin=='btc') {
       market = 'btc-clp'
-    else if(coin=='ethereum' || coin=='eth')
+    } else if (coin=='ethereum' || coin=='eth') {
       market = 'eth-clp'
-    else if(coin=='bitcoin-cash' || coin=='bch' || coin=='bitcoincash')
+    } else if (coin=='bitcoin-cash' || coin=='bch' || coin=='bitcoincash') {
       market = 'bch-clp'
+    } else {
+      msg.send('Esa no es una cripto-moneda válida.')
+      return false
+    }
 
     let url = `https://www.surbtc.com/api/v2/markets/${market}/ticker.json`
 
@@ -37,7 +41,7 @@ module.exports = (robot) => {
       } else {
         res.setEncoding('utf-8')
         let data = JSON.parse(body)
-        if (data.ticker) {
+        if (data.ticker.last_price[0]) {
           let formatNumb = number(data.ticker.last_price[0], 'CLP $')
           msg.send( `1 ${coin} está a ${formatNumb} en SURBTC` )
         } else {
@@ -52,6 +56,5 @@ module.exports = (robot) => {
     let coin = msg.match[1]
     msg.send('Consultando último valor con SURBTC... :clock5:')
     surbtcRequest(coin,msg)
-
   })
 }

@@ -1,6 +1,5 @@
 'use strict'
 
-// require('coffee-script/register')
 var hippie = require('hippie');
 
 hippie()
