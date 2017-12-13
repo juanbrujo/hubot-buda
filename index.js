@@ -53,7 +53,7 @@ module.exports = (robot) => {
   }
 
   robot.respond(/surbtc (.*)/i, (msg) => {
-    let coin = msg.match[1]
+    let coin = msg.match[1].toLowerCase()
     msg.send('Consultando último valor con SURBTC... :clock5:')
     surbtcRequest(coin,msg)
   })
