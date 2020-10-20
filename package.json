@@ -226,7 +226,7 @@
     "lru-cache": "^5.1.1",
     "make-dir": "^1.0.0",
     "meant": "^1.0.2",
-    "mem": "^1.1.0",
+    "mem": "^4.0.0",
     "make-fetch-happen": "^5.0.2",
     "mime-db": "^1.44.0",
     "mime-types": "^2.1.27",
