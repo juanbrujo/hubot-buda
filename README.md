@@ -1,17 +1,17 @@
-# Hubot-SURBTC
+# Hubot-BUDA
 
-**Hubot script para mostrar el valor reciente del Bitcoin desde SURBTC.cl**
+**Hubot script para mostrar el valor reciente de cripto-monedas desde Buda.com en pesos chilenos**
 
 [![](https://img.shields.io/badge/huemul-approved-brightgreen.svg?style=flat-square)](http://www.devschile.cl/)
-[![npm version](https://badge.fury.io/js/hubot-surbtc.svg)](https://www.npmjs.com/package/hubot-surbtc)
-[![](https://circleci.com/gh/juanbrujo/hubot-surbtc.svg?style=shield)](https://circleci.com/gh/juanbrujo/hubot-surbtc)
+[![npm version](https://badge.fury.io/js/hubot-buda.svg)](https://www.npmjs.com/package/hubot-buda)
+[![](https://circleci.com/gh/juanbrujo/hubot-buda.svg?style=shield)](https://circleci.com/gh/juanbrujo/hubot-buda)
 
-**[NPM package](https://www.npmjs.com/package/hubot-surbtc)**
+**[NPM package](https://www.npmjs.com/package/hubot-buda)**
 
 ### Instalación:
 
 ````
-$ npm install hubot-surbtc --save
+$ npm install hubot-buda --save
 ````
 
 Agregar en `external-scripts.json`:
@@ -19,30 +19,30 @@ Agregar en `external-scripts.json`:
 ````
 [
   ..
-  "hubot-surbtc"
+  "hubot-buda"
 ]
 ````
 
 ### Uso:
 
 ````
-hubot> surbtc bitcoin
+hubot> buda bitcoin
 ````
 
 ````
-hubot> surbtc ethereum
+hubot> buda ethereum
 ````
 
 ````
-hubot> surbtc bitcoin-cash
+hubot> buda bitcoin-cash
 ````
 
 **Ejemplo:**
 
 ````
-hubot> hubot surbtc bitcoin
+hubot> hubot buda bitcoin
 
-hubot> 1 bitcoin está a CLP$ 832.123 en SURBTC
+hubot> 1 bitcoin está a CLP$ 832.123 en BUDA
 ````
 
 ### Licencia:
